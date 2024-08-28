@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Registration Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-container h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+        .form-group input:focus {
+            border-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+            outline: none;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .form-buttons button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-buttons button:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px);
+        }
+        .form-buttons button[type="reset"] {
+            background-color: #f55;
+            color: #fff;
+        }
+        .form-buttons button[type="reset"]:hover {
+            background-color: #e44;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            .form-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .form-buttons button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register</h1>
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
